@@ -1,5 +1,3 @@
-# Caminhoes
-
 Instruções:
 
 1) Antes de rodar o aplicativo, é necessário instalar os seguintes pré-requisitos:
