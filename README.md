@@ -18,7 +18,7 @@ Instruções:
   - Para rodar a aplicação execute o comando:
     - dotnet run
   
-3) Para executar o conjunto de testes, abra o prompt de comando do Windows como administrador.
+3) Para rodar o conjunto de testes, abra o prompt de comando do Windows como administrador.
   - Vá até a pasta raiz do projeto.
   - Entre na pasta "CaminhaoTestes".
   - Execute o commando:
