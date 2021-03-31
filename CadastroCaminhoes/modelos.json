@@ -1,0 +1,26 @@
+[
+  {
+    "sigla": "FH",
+    "ativo": true
+  },
+  {
+    "sigla": "FM",
+    "ativo": true
+  },
+  {
+    "sigla": "RH",
+    "ativo": false
+  },
+  {
+    "sigla": "UJ",
+    "ativo": false
+  },
+  {
+    "sigla": "GF",
+    "ativo": false
+  },
+  {
+    "sigla": "RE",
+    "ativo": false
+  }
+]

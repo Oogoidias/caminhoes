@@ -1,0 +1,64 @@
+﻿@{ ViewData["Title"] = "Cadastro"; }
+
+@model CadastroViewModel
+
+<h3>Cadastro</h3>
+<hr />
+<form asp-action="Inserir" method="post">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="idCaminhao" style="display:none" asp-for="@(Model.idCaminhao)">
+                    <label class="control-label" for="nome">Nome</label>
+                    <input type="text" class="form-control" id="caminhao.nome" asp-for="@(Model.caminhao.nome)">
+                    <span asp-validation-for="@Model.caminhao.nome" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label class="control-label" for="sigla">Modelo</label>
+                    <select class="form-control single-select" id="caminhao.caminhaoModelo.sigla"
+                            asp-for="@Model.caminhao.caminhaoModelo.sigla">
+                        <option selected value="">[Selecione o Modelo]</option>
+                        @foreach (var caminhaoModelo in Model.listaCaminhaoModelo)
+                        {
+                            <option value="@(caminhaoModelo.sigla)">@(caminhaoModelo.sigla)</option>
+                        }
+                    </select>
+                    <span asp-validation-for="@Model.caminhao.caminhaoModelo.sigla" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-group">
+                    <label class="control-label" for="ano">Ano de fabricação</label>
+                    <input type="text" class="form-control" id="anoFabricacao" readonly
+                           value="@(Model.ehUpdate? @Model.caminhao.anoFabricacao : @Model.anoAtual)"
+                           asp-for="@(Model.caminhao.anoFabricacao)">
+
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label class="control-label" for="anoModelo">Ano modelo</label>
+                    <select class="form-control single-select" id="caminhao.anoModelo"
+                            asp-for="@Model.caminhao.anoModelo">
+                        <option selected value="">[Selecione o ano]</option>
+                        @foreach (var anos in Model.listaAnoModelo)
+                        {
+                            <option value="@(anos)">@(anos)</option>
+                        }
+                    </select>
+                    <span asp-validation-for="@Model.caminhao.anoModelo" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="form-group">
+                    <button type="submit" class="btn btn-success botaoExcluir">
+                        @(Model.ehUpdate ? "Atualizar" : "Inserir")
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
