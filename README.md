@@ -8,7 +8,7 @@ Instruções:
   - Sql Server 2017 Express - https://www.microsoft.com/pt-br/download/details.aspx?id=55994
     * Selecionar a opção "Baixar Mídia"
     * Baixar a versão "LocalDB"
-    * Instalar o Sql Server 2017 Express LocalDB a partir do arquivo que foi extraído da instalação.
+    * Instalar o Sql Server 2017 Express LocalDB a partir do arquivo que foi extraído na instalação.
     * Realizar o download da atualização cumulativa - https://www.microsoft.com/en-us/download/details.aspx?id=56128
     * Instalar a atualização cumulativa.
     
